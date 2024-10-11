@@ -7,24 +7,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/flowers.png" type="image/x-icon" />
     <title>Hai Liaa</title>
-    <script>
-      function playAudio() {
-        const audio = document.getElementById("background-audio");
-        audio.play();
-        sessionStorage.setItem("audioPlaying", "true");
-      }
-
-      window.onload = function () {
-        const audioPlaying = sessionStorage.getItem("audioPlaying");
-        if (audioPlaying) {
-          const audio = document.getElementById("background-audio");
-          audio.play();
-        }
-      };
-    </script>
   </head>
   <body>
-    <audio id="background-audio" loop>
+    <audio autoplay loop>
       <source src="ps.mp3" type="audio/mpeg" />
       Browser Anda tidak mendukung audio.
     </audio>
